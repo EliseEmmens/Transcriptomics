@@ -1,0 +1,4 @@
+species	habitat	pseudogenes
+Glibberon maximus	Swamp of Jupiter	123
+Zygnorbia tentaculis	Outer Rim of Ribosoma	89
+Squeeptococcus absurdii	Venusian caves	420
