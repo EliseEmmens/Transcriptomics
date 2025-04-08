@@ -22,6 +22,6 @@ Perfect voor:
 
 ## 📊 Resultaten
 
-Zie de [resultatenbespreking](resultaten/bespreking_resultaten.txt) voor meer info.
+Zie de [resultatenbespreking](resultaten/bespreking_resultaten.md) voor meer info.
 
 
