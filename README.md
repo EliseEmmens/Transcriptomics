@@ -24,7 +24,4 @@ Perfect voor:
 
 Zie de [resultatenbespreking](resultaten/bespreking_resultaten.txt) voor meer info.
 
-Of blader direct naar enkele figuren:
 
-- ![Lengte van genen](resultaten/mock_gene_lengths.png)
-- ![Expressieclusters](resultaten/expression_clusters.png)
