@@ -11,6 +11,8 @@ Perfect voor:
 - Wegwijs worden in GitHub
 - Het leren structureren van data
 
+> `I will not have you in my class if you continue to be a babbling, bumbling band of baboons who can't even SORT their data!`
+
 ## 🧬 Inhoud
 
 - `data/` – fictionele datasets voor de analyse van spreuk effectiviteit, gevaar en welke spreuken het beste samengaan met verschillende types staf.  
@@ -23,5 +25,9 @@ Perfect voor:
 ## 📊 Resultaten
 
 Zie de [resultatenbespreking](resultaten/bespreking_resultaten.md) voor meer info.
+
+
+
+
 
 
