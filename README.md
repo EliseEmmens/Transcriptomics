@@ -20,6 +20,7 @@ Perfect voor:
 - `scripts/` – scripts om prachtige onzin te genereren
 - `resultaten` - grafieken en tabellen
 - `README.md` - het document om de tekst hier te genereren
+- `assets` - overige documenten voor de opmaak van deze pagina
 
 ---
 
