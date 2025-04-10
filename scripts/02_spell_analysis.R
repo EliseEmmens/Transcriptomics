@@ -11,7 +11,7 @@ top_spells <- spells %>%
   head(10)
 
 # Save results
-write_csv(top_spells, "results/tables/top_10_spells.csv")
+write_csv(top_spells, "resultaten/top_10_spells.csv")
 
 # Plot: Power vs Accuracy
 ggplot(spells, aes(x = accuracy, y = power, color = spell_type)) +
@@ -20,4 +20,4 @@ ggplot(spells, aes(x = accuracy, y = power, color = spell_type)) +
   labs(title = "Spell Power vs Accuracy",
        x = "Accuracy (%)",
        y = "Power") +
-  ggsave("results/figures/spell_power_vs_accuracy.png", width = 8, height = 6)
+  ggsave("resultaten/spell_power_vs_accuracy.png", width = 8, height = 6)
