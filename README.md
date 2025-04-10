@@ -18,17 +18,18 @@ Perfect voor:
 - `data/raw/` – fictionele datasets voor de analyse van spreuk effectiviteit, gevaar en welke spreuken het beste samengaan met verschillende types staf.  
 - `data/processed` - verwerkte datasets gegenereerd met scripts 
 - `scripts/` – scripts om prachtige onzin te genereren
-- `resultaten` - grafieken en tabellen
+- `resultaten/` - grafieken en tabellen
+- `bronnen/` - gebruikte bronnen 
 - `README.md` - het document om de tekst hier te genereren
-- `assets` - overige documenten voor de opmaak van deze pagina
-
-TEST
+- `assets/` - overige documenten voor de opmaak van deze pagina
 
 ---
 
 ## Introductie
 
 Deze GitHub pagina staat in het teken van magische spreuken en hun eigenschappen (Harry Potter⚡). Met behulp van historische registergegevens kan de **kracht**, **nauwkeurigheid** en het **risiconiveau* geanalyseerd worden. Voor een goede tovenaar is het van belang dat de gebruikte spreuken effectief en veilig zijn om te gebruiken. Daarnaast is het van belang voor elke tovenaar om rekening te houden met de compatibiliteit van het type toverstok dat gebruikt wordt om de geschiktheid van spreukgebruik af te stemmen.  
+
+Heb je Harry Potter nooit gelezen? Moet je echt doen, [klik maar hier](bronnen/harry-potter.pdf).
 
 ## Methode
 
