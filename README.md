@@ -5,7 +5,7 @@
 
 # 🧙‍♂️ Wizarding Spell Metrics
 
-Welkom in **Wizarding Spell Metrics**, waar de data nep is, maar de structuur *verrassend oké* is. Deze repo is gemaakt om te laten zie hoe je een bio-informatica project structureert in GitHub met behulp van een onzin dataset. files mogen gedownload en hergebruikt worden (zoals [deze README.md file](README.md file). Vraag ook gerust AI voor tips!
+Welkom in **Wizarding Spell Metrics**, waar de data nep is, maar de structuur *verrassend oké* is. Deze repo is gemaakt om te laten zie hoe je een bio-informatica project structureert in GitHub met behulp van een onzin dataset. files mogen gedownload en hergebruikt worden (zoals [deze README.md file](README.md). Vraag ook gerust AI voor tips!
 
 Perfect voor:
 - Wegwijs worden in GitHub
