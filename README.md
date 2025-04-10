@@ -5,7 +5,7 @@
 
 # 🦠 Mock-robiome
 
-Welkom in **Mock-robiome**, waar de data nep is, maar de structuur *verrassend oké* is. Deze repo is gemaakt om te laten zie hoe je een bio-informatica project structureert in GitHub met behulp van een compleet onzinnige microbiële data.
+Welkom in **Wizarding Spell Metrics**, waar de data nep is, maar de structuur *verrassend oké* is. Deze repo is gemaakt om te laten zie hoe je een bio-informatica project structureert in GitHub met behulp van een onzin dataset. files mogen gedownload en hergebruikt worden (zoals deze *README.md file). Vraag ook gerust AI voor tips!
 
 Perfect voor:
 - Wegwijs worden in GitHub
@@ -13,7 +13,7 @@ Perfect voor:
 
 ## 🧬 Inhoud
 
-- `data/` – fictionele datasets van aliensoorten, niet bestaande genen, en pseudo-microbiomen
+- `data/` – fictionele datasets voor de analyse van spreuk effectiviteit, gevaar en welke spreuken het beste samengaan met verschillende types staf.  
 - `scripts/` – scripts om prachtige onzin te genereren
 
 > “We sequence, therefore we pretend.”
