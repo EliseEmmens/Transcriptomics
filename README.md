@@ -32,7 +32,7 @@ Deze GitHub pagina staat in het teken van magische spreuken en hun eigenschappen
 
 Heb je Harry Potter nooit gelezen? Moet je echt doen, [klik maar hier](bronnen/harry-potter.pdf).
 
-## Methode
+## Methoden
 
 De data is verstrekt door de Afdeling Magische Wetshandhaving en Ollivanders Wandwinkel Archieven. 
 
