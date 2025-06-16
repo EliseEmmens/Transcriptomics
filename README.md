@@ -30,15 +30,14 @@ Perfect voor:
 
 Reumatoïde artritis (RA) is een systemische auto-immuunziekte waar de precieze oorzaak nog niet bekent van is, maar het lijkt op een combinatie van genetische aanleg, omgevingsfactoren en een ontspoort immuunsysteem te zijn [(Gabriel, 2001)](bronnen/The%20epidemiology%20of%20Rheumatoid%20Arthritis.pdf). Typisch voor RA is ontsteking van gewrichtsslijmvlies (synovitis) met gewichtschade als gevolg [(Radu & Bungau, 2021)](bronnen/Management%20of%20Rheumatoid%20Arthritis%20An%20Overview.pdf). De diagnose is op basis van klinische syptomen zoals de aanwezigheid van autoantistoffen. Voor RA is er geen genezing maar wel vertraging van de symptomen door medicijnen [(Majithia & Geraci, 2007)](bronnen/Rheumatoid%20arthritis%20diagnosis%20and%20managment.pdf). 
 
-Het doel van dit onderzoek is om uit te zoeken welke genen er hoger of lager tot expressie komen in patienten met RA met behulp van 
+Het doel van dit onderzoek is om uit te zoeken welke genen er hoger of lager tot expressie komen in patienten met RA ten opzichte van de controle groep met behulp van een transcriptomics analyse. 
 
 ## Methoden
 
-De data is verstrekt door de Afdeling Magische Wetshandhaving en Ollivanders Wandwinkel Archieven. 
+De samples - 4 personen met RA (diagnose van >12 maanden) en 4 personen zonder RA - zijn verkregen via synoviumbiopt: weefsel afkomstig uit gewirchtsslijmvlies. 
+Met behulp van R studios wordt een transcriptomics analyse uitgevoerd van [ruwe data](data\raw). Om zo uiteindelijk te kijken welke genen meer of minder tot expressie komen bij personen met RA in vergelijking met de controlegroep. Ook kijkend naar de pathways die bij RA betrokken zijn met behulp van een Gene Ontology analyse (GO) aan de hand van dit [script](scripts) waaruit ook [verwerkte dataset](data\processed\Data_RA_raw\GCF_000001405.25_GRCh37.p13_genomic.gtf\DATA\Data_RA_raw) kwam. 
 
-De ruwe data van spreuken is eerst bewerkt voor analyse met behulp van [scripts/01_clean_spell_data.R](scripts/01_clean_spell_data.R). Vervolgens zijn de spreuken geanalyseerd op kracht en nauwkeurigheid met [scripts/02_spell_analysis.R](scripts/02_spell_analysis.R).
-
-## 📊 Resultaten
+## Resultaten
 
 Om inzicht te krijgen in eigenschappen van de te gebruiken spreuken is er een overzicht gemaakt, te vinden in [deze tabel](resultaten/top_10_spells.csv). Onvergeeflijke vloeken zijn niet meegenomen in dit overzicht. 
 
