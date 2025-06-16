@@ -28,9 +28,9 @@ Perfect voor:
 
 ## Introductie
 
-Deze GitHub pagina staat in het teken van magische spreuken en hun eigenschappen (Harry Potter⚡). Met behulp van historische registergegevens kan de **kracht**, **nauwkeurigheid** en het **risiconiveau** geanalyseerd worden. Voor een goede tovenaar is het van belang dat de gebruikte spreuken effectief en veilig zijn om te gebruiken. Daarnaast is het van belang voor elke tovenaar om rekening te houden met de compatibiliteit van het type toverstok dat gebruikt wordt om de geschiktheid van spreukgebruik af te stemmen.  
+Reumatoïde artritis (RA) is een systemische auto-immuunziekte waar de precieze oorzaak nog niet bekent van is, maar het lijkt op een combinatie van genetische aanleg, omgevingsfactoren en een ontspoort immuunsysteem te zijn [(Gabriel, 2001)](bronnen/The%20epidemiology%20of%20Rheumatoid%20Arthritis.pdf). Typisch voor RA is ontsteking van gewrichtsslijmvlies (synovitis) met gewichtschade als gevolg [(Radu & Bungau, 2021)](bronnen/Management%20of%20Rheumatoid%20Arthritis%20An%20Overview.pdf). De diagnose is op basis van klinische syptomen zoals de aanwezigheid van autoantistoffen. Voor RA is er geen genezing maar wel vertraging van de symptomen door medicijnen [(Majithia & Geraci, 2007)](bronnen/Rheumatoid%20arthritis%20diagnosis%20and%20managment.pdf). 
 
-Heb je Harry Potter nooit gelezen? Moet je echt doen, [klik maar hier](bronnen/harry-potter.pdf).
+Het doel van dit onderzoek is om uit te zoeken welke genen er hoger of lager tot expressie komen in patienten met RA met behulp van 
 
 ## Methoden
 
