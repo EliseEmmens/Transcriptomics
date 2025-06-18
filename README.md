@@ -35,7 +35,7 @@ Het doel van dit onderzoek is om uit te zoeken welke genen er hoger of lager tot
 ## Methoden
 
 De samples - 4 personen met RA (diagnose van >12 maanden) en 4 personen zonder RA - zijn verkregen via synoviumbiopt: weefsel afkomstig uit gewirchtsslijmvlies. 
-Met behulp van R studios wordt een transcriptomics analyse uitgevoerd van [ruwe data](data\raw). Om zo uiteindelijk te kijken welke genen meer of minder tot expressie komen bij personen met RA in vergelijking met de controlegroep. Ook kijkend naar de pathways die bij RA betrokken zijn met behulp van een Gene Ontology analyse (GO) aan de hand van dit [script](scripts) waaruit ook [verwerkte dataset](data\processed\Data_RA_raw\GCF_000001405.25_GRCh37.p13_genomic.gtf\DATA\Data_RA_raw) kwam. 
+Met behulp van R studios wordt een transcriptomics analyse uitgevoerd van [ruwe data](data\raw). Om zo uiteindelijk te kijken welke genen meer of minder tot expressie komen bij personen met RA in vergelijking met de controlegroep. Ook kijkend naar de pathways die bij RA betrokken zijn met behulp van een Gene Ontology analyse (GO) aan de hand van dit [script](scripts) waaruit ook [verwerkte dataset](data\processed\Data_RA_raw\GCF_000001405.25_GRCh37.p13_genomic.gtf\DATA\Data_RA_raw) kwam. De methode is ook nog stapsgewijs via het [flowschema]() te zien. 
 
 ## Resultaten
 
