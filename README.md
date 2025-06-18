@@ -30,7 +30,7 @@ Perfect voor:
 
 Reumatoïde artritis (RA) is een systemische auto-immuunziekte waar de precieze oorzaak nog niet bekent van is, maar het lijkt op een combinatie van genetische aanleg, omgevingsfactoren en een ontspoort immuunsysteem te zijn [(Gabriel, 2001)](bronnen/The%20epidemiology%20of%20Rheumatoid%20Arthritis.pdf). Typisch voor RA is ontsteking van gewrichtsslijmvlies (synovitis) met gewichtschade als gevolg [(Radu & Bungau, 2021)](bronnen/Management%20of%20Rheumatoid%20Arthritis%20An%20Overview.pdf). De diagnose is op basis van klinische syptomen zoals de aanwezigheid van autoantistoffen. Voor RA is er geen genezing maar wel vertraging van de symptomen door medicijnen [(Majithia & Geraci, 2007)](bronnen/Rheumatoid%20arthritis%20diagnosis%20and%20managment.pdf). 
 
-Het doel van dit onderzoek is om uit te zoeken welke genen er hoger of lager tot expressie komen in patienten met RA ten opzichte van de controle groep met behulp van een transcriptomics analyse. 
+Het doel van dit onderzoek is om uit te zoeken welke genen er meer of minder tot expressie komen in patienten met RA ten opzichte van de controle groep met behulp van een transcriptomics analyse. 
 
 ## Methoden
 
