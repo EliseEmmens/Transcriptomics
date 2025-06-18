@@ -13,15 +13,15 @@ Perfect voor:
 
 > `I will not have you in my class if you continue to be a babbling, bumbling band of baboons who can't even SORT their data!`
 
-## 📁 Inhoud/structuur
+## 📁 Inhoud
 
 - `README.md` - het document om de tekst hier te genereren
-- `data/raw/` – fictionele datasets voor de analyse van spreuk effectiviteit, gevaar en welke spreuken het beste samengaan met verschillende types staf.  
-- `data/processed` - verwerkte datasets gegenereerd met scripts 
+- `data/raw/` – Ruwe data (4 patienten met RA en 4 controle)  
+- `data/processed` - verwerkte datasets gegenereerd met script 
 - `scripts/` – Casus script 
 - `resultaten/` - grafieken en tabellen
 - `bronnen/` - gebruikte bronnen 
-- `assets/` - overige documenten voor de opmaak van deze pagina
+- `assets/` - overige documenten voor de opmaak
 - `data_stewardship/` - Voor de competentie beheren ga je aantonen dat je projectgegevens kunt beheren met behulp van GitHub. In deze folder kan je hulpvragen terugvinden om je op gang te helpen met de uitleg van data stewardship. 
 
 ---
@@ -38,6 +38,7 @@ De samples - 4 personen met RA (diagnose van >12 maanden) en 4 personen zonder R
 Met behulp van R studios wordt een transcriptomics analyse uitgevoerd van [ruwe data](data\raw). Om zo uiteindelijk te kijken welke genen meer of minder tot expressie komen bij personen met RA in vergelijking met de controlegroep. Ook kijkend naar de pathways die bij RA betrokken zijn met behulp van een Gene Ontology analyse (GO) aan de hand van dit [script](scripts) waaruit ook [verwerkte dataset](data\processed\Data_RA_raw\GCF_000001405.25_GRCh37.p13_genomic.gtf\DATA\Data_RA_raw) kwam. 
 
 ## Resultaten
+
 
 Om inzicht te krijgen in eigenschappen van de te gebruiken spreuken is er een overzicht gemaakt, te vinden in [deze tabel](resultaten/top_10_spells.csv). Onvergeeflijke vloeken zijn niet meegenomen in dit overzicht. 
 
