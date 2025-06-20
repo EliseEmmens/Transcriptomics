@@ -53,17 +53,19 @@ De volcano plots laten de spreiding van differentieel tot expressie komende gene
 #### _GO-analyse_
 GO-analyse laat zien welke biologische processen, moleculaire functies of cellulaire componenten betrokken zijn bij RA. Grote lijsten van genen veranderen naar GO-termen waarbij er achterhaald kan worden welke processen mogelijk betrokken zijn. Van de dataset is een [GO-analyse Plot](resultaten/GO-Analyseplot.png) gemaakt. Als x-as Hits (%) en y-as GO-termen ook zijn de p-waarde en counts verwerkt. Protein binding heeft bijvoorbeeld een hoge p-waarde, hoge count en ongeveer 50% hits. 
 
-De GO-analyse laat zien welke biologische processen, moleculaire functies en cellulaire componenten betrokken zijn bij RA. De [GO-analyse](resultaten/GO-Analyseplot.png) geeft Hits(%), GO-termen, p-waarde en counts weer. De visualisatie toont dat de termen zoals 'protein binding, 'immune system process' en 'interacellulair organelle lumen' een lage p-waarde en hoge count hebben. De hoge hits bevestigt dat er veel genen in RA betrokken zijn bij bepaalde GO-termen. 
+De GO-analyse laat zien welke biologische processen, moleculaire functies en cellulaire componenten betrokken zijn bij RA. De [GO-analyse](resultaten/GO-Analyseplot.png) geeft Hits(%), GO-termen, p-waarde en counts weer. De visualisatie toont dat de termen zoals 'protein binding, 'immune system process' en 'interacellulair organelle lumen' een lage p-waarde en hoge count hebben. Opvallend is dat er veel genen zijn die te maken hebben met het afweersysteem. De hoge hits bevestigt dat er veel genen in RA betrokken zijn bij bepaalde GO-termen. 
 
 #### _KEGG-Pathway_
 Een [pathview](resultaten/hsa05323.pathview.png) is gemaakt om de genexpressie verschillen te laten zien tussen RA en controle, gemarkeerd in kleur op basis van expressie (groen = downregulated, rood = upregulated) en gebruik gemaakt van de KEGG pathway map van [rheumatoid arthritis](https://www.kegg.jp/pathway/hsa05323). In de pathview is te zien dat M-CSF, IL17, TGBβ en IL23 upregulated genen zijn en dat veel genen downregulated zijn. 
 
-De [pathview](resultaten/hsa05323.pathview.png) is gebasseerd op de KEGG-pathway voor [rheumatoid arthritis (hsa05323)](https://www.kegg.jp/pathway/hsa05323) en geeft de genen weer die binnen de bekende pathway verhoogd of verlaagd in expressie. Cytokines zoals M-CSF, IL-17, TGFβ en IL23 zijn upregulated (rood), wat past bij de rol in ontstekingprocessen en synoviale activatie bij RA. Meerdere andere genen zijn downregulated (groen) wat kan wijzen op negatieve feedbackmeganismen of onderdrukking van het immunsysteem. 
+De [pathview](resultaten/hsa05323.pathview.png) is gebasseerd op de KEGG-pathway voor [rheumatoid arthritis (hsa05323)](https://www.kegg.jp/pathway/hsa05323) en geeft de genen weer die binnen de bekende pathway verhoogd of verlaagd in expressie. Cytokines zoals M-CSF, IL-17, TGFβ en IL23 zijn upregulated (rood), wat past bij de rol in ontstekingprocessen en synoviale activatie bij RA. Meerdere andere genen zijn downregulated (groen) wat kan wijzen op negatieve feedbackmeganismen of onderdrukking van het afweersysteem. 
 
 ## Conclusie
+De resultaten van de volcano-plots, GO-analyse en KEGG-pathway geven het beeld dat bij mensen met RA bepaalde genen meer of minder actief zijn dan de controle. Vooral de genen die een rol spelen bij het afweersysteem. Dit komt omdat RA er voor zorgt dat het afweersysteem lichaamseigen weefsel aanvalt. 
+De KEGG-pathway laat zien dat ontstekingsfactoren zoals IL-17 en IL-23 actiever zijn bij RA patiënten. Deze bevindingen kunnen gekoppeld worden aan bekende RA-mechanismen. Ook de GO-analyse laat zien dat genen die betrokken zijn bij eiwitbinding en ontstekingsreacties veel voorkomen. 
 
+Voor vervolgonderzoek zou gekeken kunnen worden naar sterk gereguleerde genen en cytokines in RA-patiëntenmateriaal, meerdere KEGG-analyse van meerdere pathways om andere betrokken routes in kaart te brengen. Het vergroten van de dataset zodat de resultaten betrouwbaarder worden. 
 
-Spreuken met meer accuraatheid lijken minder krachtig te zijn. Een uitzondering op deze trend is de onvergeeflijke vloek *Avada Kedavra*, welke beter niet gebruikt kan worden. 
 
 
 
