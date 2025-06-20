@@ -1,9 +1,11 @@
+# Verhoogde/verlaagde genexpressie in patienten met reumatoïde artris
+---
 <p align="center">
   <img src="assets/6610f7439ffcd635d26addc1797d59d1.jpg " width="600"/>
 </p>
 
+---
 
-# Verhoogde/verlaagde genexpressie in patienten met reumatoïde artris
 
 Welkom in **Wizarding Spell Metrics**, waar de data nep is, maar de structuur *verrassend oké* is. Deze repo is gemaakt om te laten zie hoe je een bio-informatica project structureert in GitHub met behulp van een onzin dataset. files mogen gedownload en hergebruikt worden (zoals [deze README.md file](README.md)). Vraag ook gerust AI voor tips!
 
@@ -34,8 +36,14 @@ Het doel van dit onderzoek is om uit te zoeken welke genen er meer of minder tot
 
 ## Methoden
 
-De samples - 4 personen met RA (diagnose van >12 maanden) en 4 personen zonder RA - zijn verkregen via synoviumbiopt: weefsel afkomstig uit gewirchtsslijmvlies. 
-Met behulp van R studios wordt een transcriptomics analyse uitgevoerd van [ruwe data](data/raw). Om zo uiteindelijk te kijken welke genen meer of minder tot expressie komen bij personen met RA in vergelijking met de controlegroep, hierbij is gebruik gemaakt van het humaangenoom [NCBI: GCF_000001405.25_GRCh37.p13](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.25/). Ook kijkend naar de pathways die bij RA betrokken zijn met behulp van een Gene Ontology analyse (GO) aan de hand van dit [script](scripts) waaruit ook [verwerkte dataset](data/verwerkt) kwam. De methode is ook nog stapsgewijs via het [flowschema](assets/Flowschema%20transcriptomics-analyse%20RA.pdf) te zien. 
+De samples (4 personen met RA (diagnose van >12 maanden) en 4 personen zonder RA) zijn verkregen via synoviumbiopten: weefsel afkomstig uit gewirchtsslijmvlies. 
+
+Met behulp van RStudios wordt een transcriptomics-analyse uitgevoerd op de [ruwe data](data/raw). Voor deze analyse wordt er gebruikgemaakt van het humanereferentiegenoom [NCBI: GCF_000001405.25_GRCh37.p13](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.25/). De ruwe data werdt verwerkt aan de hand van dit [script](scripts) waaruit de [verwerkte dataset](data/verwerkt) kwam.
+
+Eerst werdt er een **kwaliteitscontrole** gedaan. Met behulp van `DESeq2` pakket werdt er berekend welke genen significant meer of minder tot expressie kwamen. Vervolgens werden er pathway-analyses gedaan. **Gene Ontology (GO)-analyse** om biologische processen te identificeren die bij RA horen. De **Pathway Weighting Funciton (PWF)** laat de genlengte en bias zien. De **KEGG-pathway** maakt een beeld van de genen die verhogen/verlagen in expressie. 
+
+De methode is ook nog stapsgewijs in het [flowschema](assets/Flowschema%20transcriptomics-analyse%20RA.pdf) te zien. 
+ 
 
 ## Resultaten
 
