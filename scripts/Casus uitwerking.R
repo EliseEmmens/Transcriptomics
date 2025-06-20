@@ -1,4 +1,4 @@
-setwd("C:/Users/elise/OneDrive - NHL Stenden/Jaar 2/Periode 4/WC transcriptonics/Casus/Data_RA_raw/")
+setwd("C:/Users/elise/OneDrive - NHL Stenden/Jaar 2/Periode 4/WC transcriptonics/")
 library(clusterProfiler)
 library(org.Hs.eg.db)
 library(Rsubread)
@@ -7,6 +7,7 @@ library(readr)
 library(dplyr)
 library(DESeq2)
 library(EnhancedVolcano)
+library(pathview)
 library(goseq)
 library(TxDb.Hsapiens.UCSC.hg38.knownGene)
 library(GO.db)
@@ -17,7 +18,7 @@ library(ggplot2)
 
   buildindex(
     basename = "ref_human",
-    reference = 'GCF_000001405.25_GRCh37.p13_genomic.gtf/GCF_000001405.25_GRCh37.p13_genomic.gtf',
+    reference = 'Casus/GCF_000001405.25_GRCh37.p13_genomic.gtf.gz',
     memory = 6000,
     indexSplit = TRUE)
     # Alingeren van reads
@@ -37,6 +38,7 @@ library(ggplot2)
     # Sorteren en indexeren
 lapply(samples, function(s) {sortBam(file = paste0(s, '.BAM'), destination = paste0(s, '.sorted'))})
 lapply(samples, function(s) {indexBam(file = paste0(s, '.sorted.bam'), destination = paste0(s, '.sorted.bam'))})
+
 
 # FEATURE COUNTS
 
@@ -83,32 +85,38 @@ count_matrix <- featureCounts(
 # DESeq2 ANALYSE
       
   counts <- read.csv("Casus/Data_RA_raw/GCF_000001405.25_GRCh37.p13_genomic.gtf/Count_matrix_groot.csv")
-  Count_matrix_groot
+  head(counts)
 
   treatment <- c("RA1", "RA2", "RA3", "RA4", "norm1", "norm2", "norm3", "norm4")
   treatment_table <- data.frame(treatment)
   rownames(treatment_table) <- c("RA1", "RA2", "RA3", "RA4", "norm1", "norm2", "norm3", "norm4")
   head(treatment)
   treatment_table
-  treatment_table$treatment <- factor(c(rep("norm", 4), rep("RA", 4)))
+  treatment_table$treatment <- factor(c(rep("RA", 4), rep("norm", 4)))
 
   ncol(Count_matrix_groot)        # aantal samples (kolommen in counts)
   nrow(treatment_table)  # aantal sample-informatie rijen
-  any(counts %% 1 != 0)  # TRUE betekent dat er decimalen in zitten
+  any(Count_matrix_groot %% 1 != 0)  # TRUE betekent dat er decimalen in zitten
   Count_matrix_groot <- round(Count_matrix_groot)
   treatment_table$treatment <- factor(treatment_table$treatment)
   head(Count_matrix_groot)
 
     # Maak DESeqDataSet aan
-      dds <- DESeqDataSetFromMatrix(countData = Count_matrix_groot,
+      colnames(Count_matrix_groot)
+      rownames(treatment_table)
+      rownames(treatment_table) <- colnames(Count_matrix_groot)    
+       dds <- DESeqDataSetFromMatrix(countData = Count_matrix_groot,
                               colData = treatment_table,
                               design = ~ treatment)
       table(treatment_table$treatment)
+     
+      
+      
     # Voer analyse uit
 
       dds <- DESeq(dds)
       resultaten <- results(dds)
-      write.table(resultaten, file = 'ResultatenCasusRAVersie2.csv', row.names = TRUE, col.names = TRUE)
+      write.table(resultaten, file = 'Casus/ResultatenCasusRA2.csv', row.names = TRUE, col.names = TRUE)
 
           # Stap 1: Hoeveel genen zijn er écht veranderd? Hier tellen we hoeveel genen er significant op- of neer-gereguleerd zijn.
             sum(resultaten$padj < 0.05 & resultaten$log2FoldChange > 1, na.rm = TRUE)
@@ -138,7 +146,7 @@ resultaten_df$gene <- rownames(resultaten_df)
                 y = 'padj',
                 pCutoff = 0)
     # Figuur opslaan
-      dev.copy(png, 'VolcanoplotCasusRA.png', 
+      dev.copy(png, 'Casus/VolcanoplotCasusRA_p-value.png', 
          width = 8,
          height = 10,
          units = 'in',
@@ -188,12 +196,13 @@ names(gene_vector) <- resultaten$ENTREZID
 
 
 # GO ANALYSE MET GOSEQ
-    sig_genes <- resultaten %>%
-        filter(!is.na(padj)) %>%
-        filter(padj < 0.05 & abs(log2FoldChange) > 1)
+  resultaten <- as.data.frame(resultaten)    
+  sig_genes <- resultaten %>%
+    filter(!is.na(padj)) %>%
+    filter(padj < 0.05 & abs(log2FoldChange) > 1)
     gene_list <- as.integer(rownames(resultaten) %in% rownames(sig_genes))
     names(gene_list) <- rownames(resultaten)
-
+    
     if (!all(grepl("^[0-9]+$", rownames(resultaten)))) {
   # Converteer SYMBOL naar ENTREZ
     converted_ids <- bitr(rownames(resultaten), 
@@ -216,7 +225,14 @@ names(gene_vector) <- resultaten$ENTREZID
       gene_lengths_filtered <- gene_lengths[common_genes]
 
     pwf <- nullp(gene_list_filtered, bias.data = gene_lengths_filtered)
-
+    
+    # Figuur opslaan
+      dev.copy(png, 'Casus/PWFPlot.png', 
+             width = 8,
+             height = 10,
+             units = 'in',
+             res = 500)
+    dev.off()
 
      all <- rownames(resultaten)
       deg <- resultaten %>%
@@ -230,6 +246,8 @@ names(gene_vector) <- resultaten$ENTREZID
           tail(gene.vector)
   
     pwf <- nullp(gene.vector, genome = "hg19", id = "geneSymbol")
+    
+        
     GO.wall <- goseq(pwf, "hg19", "geneSymbol")
     #How many enriched GO terms do we have
         class(GO.wall)
@@ -263,10 +281,10 @@ names(gene_vector) <- resultaten$ENTREZID
                 size = numDEInCat)) +
      geom_point() +
      expand_limits(x = 0) +
-     labs(x = "Hits (%)", y = "GO term", colour = "p value", size = "Count") +
+     labs(x = "Hits (%)", y = "GO term", colour = "p value", size = "Count") 
      
    
 # KEGG PATHWAY
    top_terms$kegg_url <- paste0("https://www.genome.jp/dbget-bin/www_bget?pathway:", top_terms$category)
-   write.csv(top_terms, "Top_KEGG_Pathways.csv", row.names = FALSE)
+   write.csv(top_terms, "Top_KEGG_Pathways2.0.csv", row.names = FALSE)
    
