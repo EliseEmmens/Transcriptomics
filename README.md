@@ -35,22 +35,33 @@ De diagnose is op basis van klinische syptomen zoals de aanwezigheid van autoant
 
 De samples (4 personen met RA en 4 personen zonder RA) zijn verkregen via synoviumbiopten: weefsel afkomstig uit gewirchtsslijmvlies. De patiënten met RA zijn positief getest op ACPA, met een diagnose langer dan 12 maanden. 
 
-Met behulp van RStudios wordt een transcriptomics-analyse uitgevoerd op de [ruwe data](data/raw). Voor deze analyse wordt er gebruikgemaakt van het humanereferentiegenoom [NCBI: GCF_000001405.25_GRCh37.p13](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.25/). De ruwe data werdt verwerkt aan de hand van dit [script](scripts) waaruit de [verwerkte dataset](data/verwerkt) kwam.
+Met behulp van RStudios wordt een transcriptomics-analyse uitgevoerd op de [ruwe data](data/raw). Voor deze analyse wordt er gebruikgemaakt van het humanereferentiegenoom [NCBI: GCF 000001405.25 GRCh37.p13](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.25/). De ruwe data werdt verwerkt aan de hand van dit [script](scripts) waaruit de [verwerkte dataset](data/verwerkt) kwam.
 
-Eerst werdt er een **kwaliteitscontrole** gedaan. Met behulp van `DESeq2` pakket werdt er berekend welke genen significant meer of minder tot expressie kwamen. Vervolgens werden er pathway-analyses gedaan. **Gene Ontology (GO)-analyse** om biologische processen te identificeren die bij RA horen. De **Probability Weighting Funciton (PWF)** laat de genlengte en bias zien. De **KEGG-pathway** maakt een beeld van de genen die verhogen/verlagen in expressie. 
+Eerst werdt er een **kwaliteitscontrole** gedaan. Met behulp van `DESeq2` pakket werdt er berekend welke genen significant meer of minder tot expressie kwamen. Vervolgens werden er pathway-analyses gedaan. **Gene Ontology (GO)-analyse** om biologische processen te identificeren die bij RA horen. De **KEGG-pathway** maakt een beeld van de genen die verhogen/verlagen in expressie. 
 
 De methode is ook nog stapsgewijs in het [flowschema](assets/FLOWSCHEMA-Transcriptomics.pdf) te zien. 
  
 
 ## Resultaten
+De resultaten zijn verkregen via het [script](scripts) hieruit zijn resultaten gekomen, waaronder de Volcano-plot, GO-analyse, PWF-plot en KEGG-pathway
 
-### Vulcanoplot
+#### _Volcanoplot_
+De [volcano plot met p-waarde](resultaten/VolcanoPlot_P-Value2.0.png) laat zien welke genen significant veranderen in expressie. Op de x-as staat de log2FoldChange en op de y-as -log10 van de aangepaste p-waarde (padj). De gelabelde genen zijn met een padj<0,05 en log2fc van >1 of <-1. Ook is er een [volcano plot zonder de p-waarde](resultaten/VolcanoplotCasusRA.png) waar hetzelfde wordt weergegeven. 
 
-Om inzicht te krijgen in eigenschappen van de te gebruiken spreuken is er een overzicht gemaakt, te vinden in [deze tabel](resultaten/top_10_spells.csv). Onvergeeflijke vloeken zijn niet meegenomen in dit overzicht. 
+De volcano plots laten de spreiding van differentieel tot expressie komende genen weer. In de [plot met p-waarde](resultaten/VolcanoPlot_P-Value2.0.png) zijn bijvoorbeeld de genen zoals ANKRD30BL, MT-ND6, COL6A5 gelabled als significant (padj<0,05 en log2fc van >1 of <-1). Deze kunnen relevant zijn voor de ziekteoorzaak van RA. De [volcanoplot zonder p-waarde](resultaten/VolcanoplotCasusRA.png) geeft een vollediger beeld van welke genen het interessantste zijn voor onderzoek. Het grote deel van de genen rond de log2FC = 0 zijn minder interessant. 
 
-Om een afweging te maken welke spreuken het meest effectief zijn, is er onderzocht of er een verband te vinden is tussen kracht en accuraatheid. In [het resultaat hiervan](resultaten/spell_power_vs_accuracy.png) is te zien dat er een negatieve daling lijkt te zijn in kracht als de accuraatheid toeneemt. Een uitschieter is de onvergeeflijke vloek *Avada Kedavra*, met zowel hoge kracht als accuraatheid. 
+#### _GO-analyse_
+GO-analyse laat zien welke biologische processen, moleculaire functies of cellulaire componenten betrokken zijn bij RA. Grote lijsten van genen veranderen naar GO-termen waarbij er achterhaald kan worden welke processen mogelijk betrokken zijn. Van de dataset is een [GO-analyse Plot](resultaten/GO-Analyseplot.png) gemaakt. Als x-as Hits (%) en y-as GO-termen ook zijn de p-waarde en counts verwerkt. Protein binding heeft bijvoorbeeld een hoge p-waarde, hoge count en ongeveer 50% hits. 
+
+De GO-analyse laat zien welke biologische processen, moleculaire functies en cellulaire componenten betrokken zijn bij RA. De [GO-analyse](resultaten/GO-Analyseplot.png) geeft Hits(%), GO-termen, p-waarde en counts weer. De visualisatie toont dat de termen zoals 'protein binding, 'immune system process' en 'interacellulair organelle lumen' een lage p-waarde en hoge count hebben. De hoge hits bevestigt dat er veel genen in RA betrokken zijn bij bepaalde GO-termen. 
+
+#### _KEGG-Pathway_
+Een [pathview](resultaten/hsa05323.pathview.png) is gemaakt om de genexpressie verschillen te laten zien tussen RA en controle, gemarkeerd in kleur op basis van expressie (groen = downregulated, rood = upregulated) en gebruik gemaakt van de KEGG pathway map van [rheumatoid arthritis](https://www.kegg.jp/pathway/hsa05323). In de pathview is te zien dat M-CSF, IL17, TGBβ en IL23 upregulated genen zijn en dat veel genen downregulated zijn. 
+
+De [pathview](resultaten/hsa05323.pathview.png) is gebasseerd op de KEGG-pathway voor [rheumatoid arthritis (hsa05323)](https://www.kegg.jp/pathway/hsa05323) en geeft de genen weer die binnen de bekende pathway verhoogd of verlaagd in expressie. Cytokines zoals M-CSF, IL-17, TGFβ en IL23 zijn upregulated (rood), wat past bij de rol in ontstekingprocessen en synoviale activatie bij RA. Meerdere andere genen zijn downregulated (groen) wat kan wijzen op negatieve feedbackmeganismen of onderdrukking van het immunsysteem. 
 
 ## Conclusie
+
 
 Spreuken met meer accuraatheid lijken minder krachtig te zijn. Een uitzondering op deze trend is de onvergeeflijke vloek *Avada Kedavra*, welke beter niet gebruikt kan worden. 
 
