@@ -42,7 +42,7 @@ Met behulp van RStudios wordt een transcriptomics-analyse uitgevoerd op de [ruwe
 
 Eerst werdt er een **kwaliteitscontrole** gedaan. Met behulp van `DESeq2` pakket werdt er berekend welke genen significant meer of minder tot expressie kwamen. Vervolgens werden er pathway-analyses gedaan. **Gene Ontology (GO)-analyse** om biologische processen te identificeren die bij RA horen. De **Pathway Weighting Funciton (PWF)** laat de genlengte en bias zien. De **KEGG-pathway** maakt een beeld van de genen die verhogen/verlagen in expressie. 
 
-De methode is ook nog stapsgewijs in het [flowschema](assets/Flowschema%20transcriptomics-analyse%20RA.pdf) te zien. 
+De methode is ook nog stapsgewijs in het [flowschema](assets/FLOWSCHEMA-Transcriptomics.pdf) te zien. 
  
 
 ## Resultaten
