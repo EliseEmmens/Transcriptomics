@@ -10,14 +10,14 @@
 
 ## 📁 Inhoud
 
-- `README.md` - het document om de tekst hier te genereren
+- `README.md` - Verslag
 - `data/raw/` – Ruwe data (4 patienten met RA en 4 controle)  
-- `data/processed` - verwerkte datasets gegenereerd met script 
+- `data/processed` - Verwerkte datasets gegenereerd met script 
 - `scripts/` – Casus script 
-- `resultaten/` - grafieken en tabellen
-- `bronnen/` - gebruikte bronnen 
-- `assets/` - overige documenten voor de opmaak
-- `data_stewardship/` - Voor de competentie beheren ga je aantonen dat je projectgegevens kunt beheren met behulp van GitHub. In deze folder kan je hulpvragen terugvinden om je op gang te helpen met de uitleg van data stewardship. 
+- `resultaten/` - Grafieken en tabellen
+- `bronnen/` - Gebruikte bronnen 
+- `assets/` - Overige documenten voor de opmaak
+- `data_stewardship/` - Voor de competentie beheren 
 
 ---
 
