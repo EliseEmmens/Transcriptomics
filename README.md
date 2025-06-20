@@ -7,13 +7,6 @@
 ---
 
 
-Welkom in **Wizarding Spell Metrics**, waar de data nep is, maar de structuur *verrassend oké* is. Deze repo is gemaakt om te laten zie hoe je een bio-informatica project structureert in GitHub met behulp van een onzin dataset. files mogen gedownload en hergebruikt worden (zoals [deze README.md file](README.md)). Vraag ook gerust AI voor tips!
-
-Perfect voor:
-- Wegwijs worden in GitHub
-- Het leren structureren van data
-
-> `I will not have you in my class if you continue to be a babbling, bumbling band of baboons who can't even SORT their data!`
 
 ## 📁 Inhoud
 
@@ -30,23 +23,28 @@ Perfect voor:
 
 ## Introductie
 
-Reumatoïde artritis (RA) is een systemische auto-immuunziekte waar de precieze oorzaak nog niet bekent van is, maar het lijkt op een combinatie van genetische aanleg, omgevingsfactoren en een ontspoort immuunsysteem te zijn _[(Gabriel, 2001)](bronnen/The%20epidemiology%20of%20Rheumatoid%20Arthritis.pdf)_. Typisch voor RA is ontsteking van gewrichtsslijmvlies (synovitis) met gewichtschade als gevolg _[(Radu & Bungau, 2021)](bronnen/Management%20of%20Rheumatoid%20Arthritis%20An%20Overview.pdf)_. De diagnose is op basis van klinische syptomen zoals de aanwezigheid van autoantistoffen. Voor RA is er geen genezing maar wel vertraging van de symptomen door medicijnen _[(Majithia & Geraci, 2007)](bronnen/Rheumatoid%20arthritis%20diagnosis%20and%20managment.pdf)_. 
+Reumatoïde artritis (RA) is een systemische auto-immuunziekte waarvan de exacte oorzaak nog niet bekent is. Mogelijk ontstaat RA door een combinatie van genetische aanleg, omgevingsfactoren en een ontspoort immuunsysteem _[(Gabriel, 2001)](bronnen/The%20epidemiology%20of%20Rheumatoid%20Arthritis.pdf)_. 
 
-Het doel van dit onderzoek is om uit te zoeken welke genen er meer of minder tot expressie komen in patienten met RA ten opzichte van de controle groep met behulp van een transcriptomics analyse. 
+Een typisch verschijnsel bij RA is synovitis, een ontsteking van gewrichtsslijmvlies, wat uiteindelijk leidt tot gewichtschade _[(Radu & Bungau, 2021)](bronnen/Management%20of%20Rheumatoid%20Arthritis%20An%20Overview.pdf)_. 
+De diagnose is op basis van klinische syptomen zoals de aanwezigheid van autoantistoffen, zoals ACPA. Dat meet autoantistoffen tegen het CCP (cyclische gecitrullineerde peptiden) eiwit. Momenteel is er geen genezing voor RA kunnen medicijnen wel de symptomen onderdrukken _[(Majithia & Geraci, 2007)](bronnen/Rheumatoid%20arthritis%20diagnosis%20and%20managment.pdf)_. Aangezien er geen genezing is, is het van belang om een vroege diagnose te kunnen stellen zodat de patiënt eerder kan beginnen met medicijnen. 
+
+
+> Het doel van dit onderzoek is om, met behulp van transcriptomics, te achterhalen welke genen significant verschillen in expressie tussen patienten met RA en gezonde controles. Daarnaast wordt onderzocht welke biologische processen en pathways betrokken zijn bij RA.
 
 ## Methoden
 
-De samples (4 personen met RA (diagnose van >12 maanden) en 4 personen zonder RA) zijn verkregen via synoviumbiopten: weefsel afkomstig uit gewirchtsslijmvlies. 
+De samples (4 personen met RA en 4 personen zonder RA) zijn verkregen via synoviumbiopten: weefsel afkomstig uit gewirchtsslijmvlies. De patiënten met RA zijn positief getest op ACPA, met een diagnose langer dan 12 maanden. 
 
 Met behulp van RStudios wordt een transcriptomics-analyse uitgevoerd op de [ruwe data](data/raw). Voor deze analyse wordt er gebruikgemaakt van het humanereferentiegenoom [NCBI: GCF_000001405.25_GRCh37.p13](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.25/). De ruwe data werdt verwerkt aan de hand van dit [script](scripts) waaruit de [verwerkte dataset](data/verwerkt) kwam.
 
-Eerst werdt er een **kwaliteitscontrole** gedaan. Met behulp van `DESeq2` pakket werdt er berekend welke genen significant meer of minder tot expressie kwamen. Vervolgens werden er pathway-analyses gedaan. **Gene Ontology (GO)-analyse** om biologische processen te identificeren die bij RA horen. De **Pathway Weighting Funciton (PWF)** laat de genlengte en bias zien. De **KEGG-pathway** maakt een beeld van de genen die verhogen/verlagen in expressie. 
+Eerst werdt er een **kwaliteitscontrole** gedaan. Met behulp van `DESeq2` pakket werdt er berekend welke genen significant meer of minder tot expressie kwamen. Vervolgens werden er pathway-analyses gedaan. **Gene Ontology (GO)-analyse** om biologische processen te identificeren die bij RA horen. De **Probability Weighting Funciton (PWF)** laat de genlengte en bias zien. De **KEGG-pathway** maakt een beeld van de genen die verhogen/verlagen in expressie. 
 
 De methode is ook nog stapsgewijs in het [flowschema](assets/FLOWSCHEMA-Transcriptomics.pdf) te zien. 
  
 
 ## Resultaten
 
+### Vulcanoplot
 
 Om inzicht te krijgen in eigenschappen van de te gebruiken spreuken is er een overzicht gemaakt, te vinden in [deze tabel](resultaten/top_10_spells.csv). Onvergeeflijke vloeken zijn niet meegenomen in dit overzicht. 
 
